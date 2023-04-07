@@ -1,0 +1,73 @@
+1
+ let arr = [4,2,5,6,2,7]
+function soDuCua2(arr){
+  const arr2 = [];
+    for(let i= 0 ; i<=arr.length ; i++){
+        const soDu = arr[i] %2 ;
+        arr2.push(soDu);
+    }
+       return arr2;
+};
+const arr1 = soDuCua2(arr);
+console.log(arr1);
+2
+ function saoChep10Lan(str){
+  const mangMoi = [];
+  for(let i=0;i<10;i++){
+      mangMoi.push(str);
+      
+  }
+ 
+  return mangMoi.join('');
+}
+const chuoi = "a";
+const mang = saoChep10Lan(chuoi);
+console.log(mang);
+
+
+3
+ function saoChep10Lan(str){
+  const mangMoi = [];
+  for(let i=0;i<10;i++){
+      mangMoi.push(str);
+      
+  }
+ 
+  return mangMoi.join('-');
+}
+const chuoi = "a";
+const mang = saoChep10Lan(chuoi);
+console.log(mang);
+
+4
+function kiemTraGiaTriTrongMang(arr, val) {
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === val) {
+      return true;
+    }
+  }
+  return false;
+}
+
+const mangSoNguyen = [1, 2, 3, 4, 5];
+const soCanTim = 5;
+const ketQua = kiemTraGiaTriTrongMang(mangSoNguyen, soCanTim);
+console.log(ketQua); 
+
+5
+function soLonHon(arr, val) {
+  const arr1 = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] > val) {
+      arr1.push(arr[i]);
+    }
+  }
+  return arr1;
+}
+
+const mangSoNguyen = [1, 2, 3, 4, 5];
+const giaTriTruyVan = 2;
+const ketQua = soLonHon(mangSoNguyen, giaTriTruyVan);
+console.log(ketQua);
+
+6
