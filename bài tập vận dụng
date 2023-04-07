@@ -1,0 +1,25 @@
+lab 1
+function tongSochiacho3(arr) {
+  let sum = 0;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] % 2 !== 0 && arr[i] % 3 === 0) {
+      sum += arr[i];
+    }
+  }
+  return sum;
+}
+
+let arr = [1, 2, 3, 4, 5, 6];
+let sum = tongSochiacho3(arr);
+console.log(sum);
+
+
+
+lab 4
+function kiemTra(arr, val) {
+  return arr.includes(val);
+}
+lab 3
+function soDuChiaCho2(arr) {
+  return arr.map(num => num % 2);
+}
