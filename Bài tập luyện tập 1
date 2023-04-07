@@ -1,0 +1,82 @@
+lab1
+-function sum(arr) {
+  let total = 0;
+  for (let i = 0; i < arr.length; i++) {
+    total += arr[i];
+  }
+  return total;
+ -function multiple(arr) {
+  let num = 1;
+  for (let i = 0; i < arr.length; i++) {
+num *= arr[i];
+  }
+  return num;
+}
+-function average(arr) {
+  let sum = 0;
+  for (let i = 0; i < arr.length; i++) {
+    sum += arr[i];
+  }
+  let avg = sum / arr.length;
+  return avg;
+}
+-function bigger_key(arr, key) {
+  const arr1 = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] > key) {
+      arr1.push(arr[i]);
+    }
+  }
+  return arr1;
+}
+lab 2
+function insert_element(arr, pos, element) {
+  arr.splice(pos, 0, element);
+  return arr;
+}
+lab 3
+function filter_square_number(arr) {
+  return arr.filter(num => Math.sqrt(num) % 1 === 0);
+}
+lab 4
+function find_big_prime_num(arr) {
+  const primes = arr.filter(num => {
+    if (num < 2) return false;
+    for (let i = 2; i < num; i++) {
+      if (num % i === 0) return false;
+    }
+    return true;
+  });
+  return Math.max(...primes);
+}
+lab 5 
+function replace(arr) {
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] < 0) {
+      arr[i] = 0;
+    }
+  }
+  return arr;
+}
+lab 6
+function delete_prime_num(arr) {
+  for (let i = 0; i < arr.length; i++) {
+    if (isPrime(arr[i])) {
+      arr.splice(i, 1);
+      i--;
+    }
+  }
+  return arr;
+}
+
+function isPrime(num) {
+  if (num <= 1) {
+    return false;
+  }
+  for (let i = 2; i <= Math.sqrt(num); i++) {
+    if (num % i === 0) {
+      return false;
+    }
+  }
+  return true;
+}
