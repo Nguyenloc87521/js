@@ -1,0 +1,53 @@
+function grades  (grades_name , grades_grade , grades_sex){
+    this.name = grades_name,
+    this.grade = grades_grade,
+    this.sex = grades_sex
+}
+const student1 = new grades ( "John" , 8 , "M")
+const student2 = new grades ( "Sarah" , 12 , "F")
+const student3 = new grades ( "Bob" , 16 , "M")
+const student4 = new grades ( "Johnny" , 2 , "M")
+const student5 = new grades ( "Ethan" , 4 , "M")
+const student6 = new grades ( "Paula" , 18 , "F")
+const student7 = new grades ( "Donald" , 5 , "M")
+const student8 = new grades ( "Jennifer" , 13 , "F")
+const student9 = new grades ( "Courtney" , 15 , "F")
+const student10 = new grades ( "Jane" , 9 , "F")
+let students = [student1, student2, student3,student4,student5,student6,student7,student8,student9,student10]
+
+
+function print_grades_list(grades_arr){
+   for(grades of grades_arr)
+   console.log(`     ${grades_name} - ${grades_grade} - ${grades_sex} `)
+}
+
+1.function average_rank_of_grades(grades_list){
+    const sum = grades_list.reduce((total, element) => total + element*grade, 0);
+  const avg = sum / 10;
+  return avg;
+}
+2.funtion average_rank_of_femal(grades_list,grade){
+    const filterGrades = grades.filter((grade) => grade.sex === 'F');
+  const sum = filterGrades.reduce((total, element) => total + element.grade, 0);
+  const avg = sum / filteredGrades.length;
+  return avg;
+}
+3.funtion average_rank_of_mal(grades_list,grade){
+    const filterGrades = grades.filter((grade) => grade.sex === 'M');
+  const sum = filterGrades.reduce((total, element) => total + element.grade, 0);
+  const avg = sum / filteredGrades.length;
+  return avg;
+
+4. function top_femal(grades_list,grade){
+    return grades_list.filter( grades.filter(grade => grade.sex === 'F').reduce((max, cur) => (cur.grade > max.grade ? cur : max), { grade: -Infinity });
+                                  
+}
+
+
+
+
+
+
+
+
+
