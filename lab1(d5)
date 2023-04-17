@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="content">
+        <p>content</p>
+        <button onclick="changeContent()">Change content</button>
+        <button onclick="changeColor()">Change Color</button>
+        <button id = "btn-3" onclick="changeBackground()">Change background</button>
+      </div>
+  
+
+
+    <script>
+         const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789 ';
+         let content_element = document.getElementById('content')
+        
+        function get_random_content(length) {
+            const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+            const characters_length = characters.length;
+            let result = ""
+            for (let i = 0; i < length; i++) result += characters[Math.floor(Math.random() * characters_length)]
+            return result
+        }
+        function changeContent() {
+            let random_length = Math.floor(Math.random() * 100 + 10)
+            let html = `<p id="content">${get_random_content(random_length)}</p>`
+           content_element.innerHTML = html
+        }
+        
+
+
+        
+        
+        function generate_random_color() {
+            const characters = "0123456789ABCDEF";
+          
+            let hexCode = "#"
+            for (let i = 0; i < 6; i++) hexCode += characters[Math.floor(Math.random() * 16)]
+            return hexCode
+        }
+        function changeColor() {
+            content_element.style.color = generate_random_color()
+        }
+
+
+        function randomColorRgb() {
+  var red = Math.floor(Math.random() * 256); 
+  var green = Math.floor(Math.random() * 256); 
+  var blue = Math.floor(Math.random() * 256);
+  var rgb = "rgb(" + red + ", " + green + ", " + blue + ")";
+  return rgb ;
+}
+document.getElementById('btn-3').addEventListener('click', function () {
+            content_element.style.backgroundColor = randomColorRgb()
+        })
+
+    </script>
+</body>
+</html>
