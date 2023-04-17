@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+</head>
+<style>
+
+</style>
+<body> 
+    
+    <input type="password" id="passwordInput">
+<button id="showHideButton" >Show</button>
+
+<script>
+
+  let passwordInput = document.getElementById("passwordInput");
+  let showHideButton = document.getElementById("showHideButton");
+  showHideButton.addEventListener('click', function () {
+  if (passwordInput.type === "password") {
+    passwordInput.type = "text";
+    showHideButton.textContent = "Hide";
+  } else {
+    passwordInput.type = "password";
+    showHideButton.textContent = "Show";
+  }
+})
+</script>
+</body>
+</html>
