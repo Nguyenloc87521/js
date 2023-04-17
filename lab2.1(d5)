@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+  
+</head>
+<body>
+     <div  >
+        <style>
+             .circle{
+             position:absolute;
+             width :50px;
+             height:50px;
+             background-color : red ;
+             border-radius: 50%;
+            }
+        </style>
+     </div>
+ 
+     <div>
+        <style>
+            .rectangle {
+                position: absolute;
+                background-color: yellow;
+            }
+        </style>
+    </div>
+
+
+
+</body>
+<script>
+    document.addEventListener('click',function(event){
+       const circle = document.createElement("div");
+       circle.className = "circle";
+       circle.style.left = event.clientX -25 + "px";
+       circle.style.top = event.clientY -25 +"px";
+       document.body.appendChild(circle);
+
+    }
+    );
+    document.addEventListener("keydown", function (events) {
+        if (events.key === "b") {
+            const rectangle = document.createElement("div")
+            rectangle.className = "rectangle"
+            rectangle.style.width = "50px"
+            rectangle.style.height = "50px"
+            rectangle.style.left = Math.random() * window.innerWidth + "px"
+            rectangle.style.top = Math.random() * window.innerHeight + "px"
+            document.body.appendChild(rectangle)
+        }
+    })
+
+
+ 
+</script>
+</html>
